@@ -9,6 +9,7 @@ tests_require = [
     'ftw.testing',
     'plone.app.testing',
     'plone.testing',
+    'parameterized',
 ]
 
 extras_require = {

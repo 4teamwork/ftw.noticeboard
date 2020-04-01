@@ -1,10 +1,12 @@
+from ftw.builder.content import at_content_builders_registered
+from ftw.builder.content import register_at_content_builders
 from ftw.builder.testing import BUILDER_LAYER
 from ftw.builder.testing import functional_session_factory
 from ftw.builder.testing import set_builder_session_factory
-from plone.app.testing import applyProfile
 from plone.app.testing import FunctionalTesting
 from plone.app.testing import PLONE_FIXTURE
 from plone.app.testing import PloneSandboxLayer
+from plone.app.testing import applyProfile
 from plone.testing import z2
 from zope.configuration import xmlconfig
 
