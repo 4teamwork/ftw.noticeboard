@@ -15,6 +15,8 @@
     <!-- class used for content items -->
     <property name="klass">ftw.noticeboard.types.category.Category</property>
 
+    <property name="add_permission">ftw.noticeboard.AddCategory</property>
+
     <property name="behaviors">
         <element value="plone.app.dexterity.behaviors.metadata.IBasic"/>
     </property>

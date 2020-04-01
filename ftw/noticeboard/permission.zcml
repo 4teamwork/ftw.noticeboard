@@ -1,0 +1,10 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    i18n_domain="ftw.noticeboard">
+
+    <permission
+        id="ftw.noticeboard.AddCategory"
+        title="ftw.noticeboard: Add Category"
+        />
+
+</configure>
