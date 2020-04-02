@@ -2,7 +2,6 @@
 <layers>
 
     <layer name="ftw.noticeboard"
-           interface="ftw.noticeboard.interfaces.IFtwNoticeboardLayer"
            remove="True" />
 
 </layers>
