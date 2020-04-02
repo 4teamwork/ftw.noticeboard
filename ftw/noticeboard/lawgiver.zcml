@@ -7,7 +7,18 @@
 
     <lawgiver:map_permissions
         action_group="add"
-        permissions="ftw.noticeboard: Add Category"
+        permissions="ftw.noticeboard: Add Category,
+                     ftw.noticeboard: Add Notice"
+        />
+
+    <lawgiver:map_permissions
+        action_group="edit"
+        permissions="ftw.noticeboard: Edit Notice"
+        />
+
+    <lawgiver:map_permissions
+        action_group="delete"
+        permissions="ftw.noticeboard: Delete Notice"
         />
 
 </configure>

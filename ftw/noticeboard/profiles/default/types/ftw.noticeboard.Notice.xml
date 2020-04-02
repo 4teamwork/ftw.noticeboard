@@ -15,7 +15,9 @@
     <!-- class used for content items -->
     <property name="klass">ftw.noticeboard.types.notice.Notice</property>
 
-    <!-- <property name="add_permission">ftw.noticeboard.AddNotice</property>  -->
+    <property name="add_permission">ftw.noticeboard.AddNotice</property>
+    <property name="add_permission">ftw.noticeboard.EditNotice</property>
+    <property name="add_permission">ftw.noticeboard.DeleteNotice</property>
 
     <property name="behaviors">
         <element value="plone.app.dexterity.behaviors.metadata.IBasic"/>

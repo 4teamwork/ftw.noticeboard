@@ -7,4 +7,19 @@
         title="ftw.noticeboard: Add Category"
         />
 
+    <permission
+        id="ftw.noticeboard.AddNotice"
+        title="ftw.noticeboard: Add Notice"
+        />
+
+    <permission
+        id="ftw.noticeboard.EditNotice"
+        title="ftw.noticeboard: Edit Notice"
+        />
+
+    <permission
+        id="ftw.noticeboard.DeleteNotice"
+        title="ftw.noticeboard: Delete Notice"
+        />
+
 </configure>
