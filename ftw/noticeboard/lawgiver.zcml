@@ -6,18 +6,22 @@
     <include package="ftw.lawgiver" />
 
     <lawgiver:map_permissions
-        action_group="add"
-        permissions="ftw.noticeboard: Add Category,
-                     ftw.noticeboard: Add Notice"
+        action_group="add category"
+        permissions="ftw.noticeboard: Add Category"
         />
 
     <lawgiver:map_permissions
-        action_group="edit"
+        action_group="add notice"
+        permissions="ftw.noticeboard: Add Notice"
+        />
+
+    <lawgiver:map_permissions
+        action_group="edit notice"
         permissions="ftw.noticeboard: Edit Notice"
         />
 
     <lawgiver:map_permissions
-        action_group="delete"
+        action_group="delete notice"
         permissions="ftw.noticeboard: Delete Notice"
         />
 
