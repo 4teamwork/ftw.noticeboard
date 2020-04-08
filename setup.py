@@ -7,6 +7,7 @@ tests_require = [
     'ftw.builder',
     'ftw.testbrowser',
     'ftw.testing',
+    'ftw.lawgiver [deletepermission]',
     'plone.app.testing',
     'plone.testing',
     'parameterized',
@@ -49,6 +50,7 @@ setup(
     install_requires=[
         'Plone',
         'setuptools',
+        'ftw.lawgiver [deletepermission]',
         'ftw.upgrade',
     ],
 

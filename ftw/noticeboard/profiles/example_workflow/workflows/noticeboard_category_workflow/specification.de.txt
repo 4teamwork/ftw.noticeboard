@@ -1,0 +1,33 @@
+[ftw.noticeboard Category Workflow]
+
+Initialzustand: Veröffentlicht
+
+Rollen Zuweisung:
+  Leser => Reader
+  Benutzer => Member
+  Hinzufüger => Contributor
+  Bearbeiter => Editor
+  Redaktor => Reviewer
+  Verwalter => Site Administrator
+  Manager => Manager
+
+  Owner => Owner
+
+
+Allgemein:
+  Ein Benutzer kann das gleiche wie ein Leser.
+  Ein Hinzufüger kann das gleiche wie ein Benutzer.
+  Ein Bearbeiter kann das gleiche wie ein Hinzufüger
+  Ein Owner kann das gleiche wie ein Bearbeiter.
+  Ein Verwalter kann das gleiche wie ein Owner.
+  Ein Manager kann das gleiche wie ein Verwalter.
+
+Status Veröffentlicht:
+  Ein Benutzer kann den Inhalt ansehen.
+  Ein Benutzer kann Inhalte hinzufügen.
+
+  Ein Owner kann Inhalte löschen.
+  Ein Owner kann Inhalte bearbeiten.
+
+  Ein Verwalter kann diesen Inhalt bearbeiten.
+  Ein Verwalter kann diesen Inhalt löschen.

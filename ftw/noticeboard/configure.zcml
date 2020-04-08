@@ -16,6 +16,13 @@
         />
 
     <genericsetup:registerProfile
+        name="example_workflow"
+        title="ftw.noticeboard example workflow"
+        directory="profiles/example_workflow"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        />
+
+    <genericsetup:registerProfile
         name="uninstall"
         title="ftw.noticeboard:uninstall"
         directory="profiles/uninstall"
