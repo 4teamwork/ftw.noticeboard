@@ -29,14 +29,18 @@ class TestNoticePermission(FunctionalTestCase):
 
         assert 'MyNotice' in browser.css('#parent-fieldname-title').first.text_content()
 
+
     @parameterized.expand([('Site Administrator', 'can not add'), ('Contributor', 'can add')])
     @browsing
     def test_notice_type_add_permission(self, role, expectation, browser):
         """
-        Make sure that the Permission for adding Categories works correctly.
+        Make sure that the Permission for adding Notices works correctly.
         """
         self.grant('Site Administrator')
+
+        # In order to add notices it's required to have a category to add them to it.
         page = create(Builder('ftw.noticeboard.Category'))
+
         user = create(Builder('user').with_roles(role, on=page))
         browser.login(user).visit(page)
         # Try to add a new Notice
@@ -45,10 +49,35 @@ class TestNoticePermission(FunctionalTestCase):
             # When the expectation 'can not add' is, then this should fail.
             factoriesmenu.add('Notice')
             if expectation == 'can not add':
-                self.fail('The role {} shouldn\'t be able to add a new Category type.'.format(role))
-        except ValueError as e:
-            if 'The type "Category" is not addable' in e.message and expectation == 'can add':
-                self.fail('The role {} should be able to add a new Category type.'.format(role))
+                self.fail('The role {} shouldn\'t be able to add a new Notice type.'.format(role))
+        except ValueError as error:
+            if 'The type "Notice" is not addable' in error.message and expectation == 'can add':
+                self.fail('The role {} should be able to add a new Notice type.'.format(role))
 
-        # When the expectation 'can not add' is, then this point should never be reached in the code
-        # because it should fail above.
+    @browsing
+    def test_can_owner_edit_notice(self, browser):
+        self.grant('Contributor')
+        notice = create(Builder('ftw.noticeboard.Notice'))
+        user = create(Builder('user').with_roles('Owner', on=notice))
+        browser.login(user).visit(notice)
+        browser.find('Edit').click()
+
+        browser.fill({'Title': 'My Edited Notice',
+                      'Summary Used in item listings and search results.': 'Change some stuff.'}).submit()
+
+        self.assertEquals('My Edited Notice', browser.css('.documentFirstHeading').first.text)
+        self.assertEquals('Change some stuff.', browser.css('.documentDescription').first.text)
+
+    @browsing
+    def test_can_foreign_user_can_not_edit_notice(self, browser):
+        self.grant('Contributor')
+        notice = create(Builder('ftw.noticeboard.Notice'))
+        foreign = create(Builder('user').with_roles('Contributor'))
+        browser.login(foreign).visit(notice)
+        browser.find('Edit').click()
+
+        browser.fill({'Title': 'My Edited Notice',
+                      'Summary Used in item listings and search results.': 'Change some stuff.'}).submit()
+
+        self.assertEquals('My Edited Notice', browser.css('.documentFirstHeading').first.text)
+        self.assertEquals('Change some stuff.', browser.css('.documentDescription').first.text)

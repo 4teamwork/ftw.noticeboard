@@ -11,15 +11,5 @@
             <role name="Contributor"/>
         </permission>
 
-        <permission name="ftw.noticeboard: Edit Notice" acquire="False">
-            <role name="Owner"/>
-            <role name="Site Administrator"/>
-        </permission>
-
-        <permission name="ftw.noticeboard: Delete Notice" acquire="False">
-            <role name="Owner"/>
-            <role name="Site Administrator"/>
-        </permission>
-
     </permissions>
 </rolemap>

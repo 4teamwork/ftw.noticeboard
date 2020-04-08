@@ -1,0 +1,72 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-01-08 16:55+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Preferred-Encodings: utf-8 latin1\n"
+
+#. Default: "Veröffentlicht"
+#: ftw/noticeboard/profiles/example_workflow/workflows/noticeboard_notice_workflow/specification.de.txt
+msgid "Veröffentlicht"
+msgstr "Veröffentlicht"
+
+msgid "ftw.noticeboard.Category"
+msgstr "Kategorie"
+
+msgid "ftw.noticeboard.Notice"
+msgstr "Mitteilung"
+
+#. Default: "Hinzufüger"
+#: ftw/noticeboard/profiles/example_workflow/workflows/noticeboard_notice_workflow/specification.de.txt
+msgid "noticeboard_notice_workflow--ROLE--Contributor"
+msgstr "Hinzufüger"
+
+#. Default: "Bearbeiter"
+#: ftw/noticeboard/profiles/example_workflow/workflows/noticeboard_notice_workflow/specification.de.txt
+msgid "noticeboard_notice_workflow--ROLE--Editor"
+msgstr "Bearbeiter"
+
+#. Default: "Manager"
+#: ftw/noticeboard/profiles/example_workflow/workflows/noticeboard_notice_workflow/specification.de.txt
+msgid "noticeboard_notice_workflow--ROLE--Manager"
+msgstr "Manager"
+
+#. Default: "Benutzer"
+#: ftw/noticeboard/profiles/example_workflow/workflows/noticeboard_notice_workflow/specification.de.txt
+msgid "noticeboard_notice_workflow--ROLE--Member"
+msgstr "Benutzer"
+
+#. Default: "Owner"
+#: ftw/noticeboard/profiles/example_workflow/workflows/noticeboard_notice_workflow/specification.de.txt
+msgid "noticeboard_notice_workflow--ROLE--Owner"
+msgstr "Owner"
+
+#. Default: "Leser"
+#: ftw/noticeboard/profiles/example_workflow/workflows/noticeboard_notice_workflow/specification.de.txt
+msgid "noticeboard_notice_workflow--ROLE--Reader"
+msgstr "Leser"
+
+#. Default: "Redaktor"
+#: ftw/noticeboard/profiles/example_workflow/workflows/noticeboard_notice_workflow/specification.de.txt
+msgid "noticeboard_notice_workflow--ROLE--Reviewer"
+msgstr "Redaktor"
+
+#. Default: "Verwalter"
+#: ftw/noticeboard/profiles/example_workflow/workflows/noticeboard_notice_workflow/specification.de.txt
+msgid "noticeboard_notice_workflow--ROLE--Site Administrator"
+msgstr "Verwalter"
+
+#. Default: "Veröffentlicht"
+#: ftw/noticeboard/profiles/example_workflow/workflows/noticeboard_notice_workflow/specification.de.txt
+msgid "noticeboard_notice_workflow--STATUS--veroffentlicht"
+msgstr "Veröffentlicht"
+

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<object name="portal_workflow" meta_type="Plone Workflow Tool">
+    <object name="noticeboard_notice_workflow" meta_type="Workflow"/>
+    <bindings>
+        <type type_id="ftw.noticeboard.Category">
+            <bound-workflow workflow_id="noticeboard_notice_workflow"/>
+        </type>
+   </bindings>
+</object>
