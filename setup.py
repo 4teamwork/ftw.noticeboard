@@ -49,6 +49,7 @@ setup(
         'Plone',
         'setuptools',
         'ftw.upgrade',
+        'collective.quickupload',
     ],
 
     tests_require=tests_require,
