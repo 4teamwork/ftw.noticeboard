@@ -50,6 +50,7 @@ setup(
         'setuptools',
         'ftw.upgrade',
         'collective.quickupload',
+        'ftw.datepicker',
     ],
 
     tests_require=tests_require,
