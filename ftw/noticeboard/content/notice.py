@@ -21,7 +21,7 @@ class INoticeSchema(model.Schema):
         title=_(u'label_accept_conditions', default=u'Terms and Conditions'),
         description=_(u'description_accept_conditions',
                       default=u'Please accept the '
-                      '<a target="_blank" href="./terms_and_conditions">terms and conditions</a>'),
+                      '<a target="_blank" href="./terms-and-conditions">terms and conditions</a>'),
         default=False)
 
 
