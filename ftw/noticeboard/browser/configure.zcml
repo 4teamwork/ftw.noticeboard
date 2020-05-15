@@ -20,5 +20,13 @@
         class=".conditions.TermsAndConditions"
         />
 
+    <browser:page
+        for="ftw.noticeboard.content.noticeboard.INoticeBoard"
+        name="noticeboard_view"
+        permission="zope2.View"
+        class=".noticeboard.NoticeBoardView"
+        template="templates/noticeboard.pt"
+        />
+
 
 </configure>

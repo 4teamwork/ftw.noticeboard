@@ -1,0 +1,22 @@
+<html xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      metal:use-macro="context/main_template/macros/master"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="ftw.noticeboard">
+
+    <div metal:fill-slot="content-core">
+        <tal:categories repeat="category view/get_categories_and_notices">
+            <div class="collapsible-head">
+                <h2 tal:content="category/title" />
+            </div>
+            <div class="collabsible-content">
+                <tal:notices repeat="notice category/notices">
+                    <div class="notice-wrapper">
+                        <span class="expiration-date" tal:content="notice/expires"/>
+                        <h3><a tal:attributes="href notice/url" tal:content="notice/title"/></h3>
+                    </div>
+                </tal:notices>
+            </div>
+        </tal:categories>
+    </div>
+</html>
