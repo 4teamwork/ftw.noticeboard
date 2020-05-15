@@ -36,4 +36,13 @@
         template="templates/noticeboard.pt"
         />
 
+    <browser:page
+        for="ftw.noticeboard.content.notice.INotice"
+        name="notice_view"
+        permission="zope2.View"
+        class=".notice.NoticeView"
+        template="templates/notice.pt"
+        />
+
+
 </configure>
