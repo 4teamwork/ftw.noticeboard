@@ -23,6 +23,7 @@ class NoticeBoardView(BrowserView):
             results.append(
                 {
                     'title': category.Title,
+                    'id': category.id,
                     'url': category.absolute_url(),
                     'notices': [
                         {
