@@ -73,3 +73,26 @@ class TestNoticeBoardView(FunctionalTestCase):
         browser.css('.collabsible-content').first.css('h3 a').first.click()
         self.assertEqual(notice.absolute_url(), browser.url)
 
+    @browsing
+    def test_category_view(self, browser):
+        noticeboard, cat1, cat2 = self._create_content()
+        browser.login().visit(cat1)
+
+        self.assertEqual(
+            1,
+            len(browser.css('.collabsible-content')),
+            'Expect 1 content area')
+
+        self.assertEquals(
+            3,
+            len(browser.css('.collabsible-content').css('h3')),
+            'Expect 3 notices in first category'
+        )
+
+        browser.login().visit(cat2)
+
+        self.assertEquals(
+            1,
+            len(browser.css('.collabsible-content').css('h3')),
+            'Expect 1 notice in second category'
+        )
