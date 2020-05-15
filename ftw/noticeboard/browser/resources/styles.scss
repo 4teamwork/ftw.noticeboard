@@ -1,3 +1,28 @@
+.template-noticeboard_view {
+  ul {
+    @include ul(plain);    
+  }
+
+  .collapsible-head {
+    position: relative;
+    cursor: pointer;
+
+    .icon {
+      display: block;
+      position: absolute;
+      top: 25%;
+      right: 0;
+      margin-right: $margin-horizontal;
+      @extend .fa-icon;
+      @extend .fa-plus-circle;
+    }
+    &.open .icon {
+      @extend .fa-minus-circle; 
+    }
+  }
+}
+
+
 .notice-detail-wrapper {
 
   display: flex;
