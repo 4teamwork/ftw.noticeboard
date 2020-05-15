@@ -1,0 +1,33 @@
+.notice-detail-wrapper {
+
+  display: flex;
+  flex-wrap: nowrap;
+
+  .notice-image-slider {
+    width: 33%;
+    img {
+        width: 100%;
+        height: auto;
+    }
+  }
+
+  .notice-details {
+    display: block;
+    width: 67%;
+    padding-left: $padding-horizontal;
+  }
+
+  .label {
+    font-weight: normal;
+    display: block
+  }
+
+  .value {
+    font-weight: bold;
+  }
+}
+
+.notice-description {
+  margin: $margin-vertical 0;
+  font-weight: bold;
+}

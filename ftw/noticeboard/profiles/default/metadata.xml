@@ -4,5 +4,7 @@
         <dependency>profile-ftw.datepicker:default</dependency>
         <dependency>profile-collective.quickupload:default</dependency>
         <dependency>profile-ftw.upgrade:default</dependency>
+        <dependency>profile-ftw.theming:default</dependency>
+        <dependency>profile-ftw.slider:default</dependency>
     </dependencies>
 </metadata>
