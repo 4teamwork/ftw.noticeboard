@@ -6,6 +6,7 @@ from ftw.testbrowser.pages import factoriesmenu
 from ftw.testbrowser.pages import statusmessages
 from ftw.testbrowser.pages import plone
 from plone.app.textfield.value import RichTextValue
+from plone.app.testing import login
 
 
 class TestContentTypes(FunctionalTestCase):
@@ -42,9 +43,36 @@ class TestContentTypes(FunctionalTestCase):
 
         browser.login().visit(category)
         factoriesmenu.add('Notice')
-        browser.fill({'Title': u'This is a Notice', 'Terms and Conditions': True})
+        browser.fill(
+            {
+                'Title': u'This is a Notice',
+                'Price': '100',
+                'Terms and Conditions': True,
+                'E-Mail': u'hans@peter.example',
+                'Text': u'Anything',
+            }
+        )
         browser.find_button_by_label('Save').click()
         self.assertEquals(u'This is a Notice', plone.first_heading())
+
+    @browsing
+    def test_notice_default_value_email_field(self, browser):
+        noticeboard = create(Builder('noticeboard').titled(u'Noticeboard'))
+        category = create(Builder('noticecategory')
+                          .having(conditions=RichTextValue('Something'))
+                          .titled(u'Category')
+                          .within(noticeboard))
+
+        user = create(Builder('user').with_roles('Site Administrator'))
+        login(self.portal, user.getId())
+
+        notice = create(Builder('notice')
+                        .titled(u'This is a Notice')
+                        .having(accept_conditions=True,
+                                text=RichTextValue('Something'),
+                                price='100')
+                        .within(category))
+        self.assertEqual(user.getProperty('email'), notice.email)
 
     @browsing
     def test_terms_and_conditions_need_to_be_accepted(self, browser):
@@ -56,7 +84,14 @@ class TestContentTypes(FunctionalTestCase):
 
         browser.login().visit(category)
         factoriesmenu.add('Notice')
-        browser.fill({'Title': u'This is a Notice'})
+        browser.fill(
+            {
+                'Title': u'This is a Notice',
+                'E-Mail': u'hans@peter.example',
+                'Price': '100',
+                'Text': u'Anything',
+            }
+        )
         browser.find_button_by_label('Save').click()
         self.assertEquals(u'Add Notice', plone.first_heading())
         statusmessages.assert_message('There were some errors.')

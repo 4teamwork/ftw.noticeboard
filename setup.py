@@ -51,6 +51,7 @@ setup(
         'ftw.upgrade',
         'collective.quickupload',
         'ftw.datepicker',
+        'plone.api',
     ],
 
     tests_require=tests_require,

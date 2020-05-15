@@ -27,7 +27,16 @@ class TestBehaviors(FunctionalTestCase):
 
         with freeze(datetime(2014, 5, 7, 12, 30)):
             factoriesmenu.add('Notice')
-            browser.fill({'Title': u'This is a Notice', 'Terms and Conditions': True})
+            browser.fill(
+                {
+                    'Title': u'This is a Notice',
+                    'Price': '100',
+                    'Terms and Conditions': True,
+                    'E-Mail': u'hans@peter.example',
+                    'Text': u'Anything',
+                }
+            )
+
             browser.find_button_by_label('Save').click()
 
             context = browser.context
