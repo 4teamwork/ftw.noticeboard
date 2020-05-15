@@ -1,6 +1,7 @@
 from ftw.noticeboard import _
 from plone import api
 from plone.app.textfield import RichText
+from plone.autoform import directives
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.dexterity.content import Container
 from plone.dexterity.utils import safe_unicode
@@ -43,6 +44,7 @@ class INoticeSchema(model.Schema):
         allowed_mime_types=('text/html',)
     )
 
+    directives.order_after(accept_conditions='*')
     accept_conditions = schema.Bool(
         title=_(u'label_accept_conditions', default=u'Terms and Conditions'),
         description=_(u'description_accept_conditions',
