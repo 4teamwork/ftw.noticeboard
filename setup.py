@@ -51,6 +51,7 @@ setup(
         'ftw.upgrade',
         'collective.quickupload',
         'ftw.datepicker',
+        'ftw.slider',
         'ftw.theming',
         'plone.api',
     ],
