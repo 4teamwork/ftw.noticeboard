@@ -22,6 +22,16 @@
   }
 }
 
+.template-category_view {
+    .collapsible-head {
+      display: none;
+    }
+
+    .collabsible-content[hidden] {
+      display: block;
+      margin-top: $margin-horizontal;
+    }
+}
 
 .notice-detail-wrapper {
 
