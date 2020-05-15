@@ -16,7 +16,7 @@
     </property>
 
     <!-- schema interface -->
-    <property name="schema">ftw.noticeboard.content.notice.INoticeCategorySchema</property>
+    <property name="schema">ftw.noticeboard.content.category.INoticeCategorySchema</property>
 
     <!-- class used for content items -->
     <property name="klass">ftw.noticeboard.content.category.NoticeCategory</property>
