@@ -14,3 +14,10 @@ class NoticeCategoryBuilder(DexterityBuilder):
 
 
 builder_registry.register('noticecategory', NoticeCategoryBuilder)
+
+
+class NoticeBuilder(DexterityBuilder):
+    portal_type = 'ftw.noticeboard.Notice'
+
+
+builder_registry.register('notice', NoticeBuilder)

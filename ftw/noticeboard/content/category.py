@@ -20,7 +20,8 @@ class INoticeCategorySchema(model.Schema):
         description=_(u'description_conditions',
                       default=u'Those conditions needs to be accepted for posting in this category'),
         required=True,
-        allowed_mime_types=('text/html',))
+        allowed_mime_types=('text/html',)
+    )
 
 
 class NoticeCategory(Container):
