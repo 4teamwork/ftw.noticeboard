@@ -4,6 +4,9 @@ from zope.publisher.browser import BrowserView
 
 class NoticeBoardView(BrowserView):
 
+    def get_categories(self):
+        return self.context.listFolderContents()  # not a catalog query
+
     def get_categories_and_notices(self):
         """
         Return a prepopulated structure for easy rendering in the template.
@@ -13,9 +16,8 @@ class NoticeBoardView(BrowserView):
         """
         catalog = api.portal.get_tool('portal_catalog')
         results = []
-        categories = self.context.listFolderContents()  # not a catalog query
 
-        for category in categories:
+        for category in self.get_categories():
             notices = catalog(path='/'.join(category.getPhysicalPath()),
                               portal_type='ftw.noticeboard.Notice')
             results.append(
