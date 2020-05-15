@@ -15,6 +15,14 @@ class TestContentTypes(FunctionalTestCase):
         super(TestContentTypes, self).setUp()
         self.grant('Manager')
 
+    def _create_content(self):
+        noticeboard = create(Builder('noticeboard').titled(u'Noticeboard'))
+        category = create(Builder('noticecategory')
+                          .having(conditions=RichTextValue('Something'))
+                          .titled(u'Category')
+                          .within(noticeboard))
+        return noticeboard, category
+
     @browsing
     def test_add_noticeboard(self, browser):
         browser.login().visit()
@@ -35,12 +43,7 @@ class TestContentTypes(FunctionalTestCase):
 
     @browsing
     def test_add_notice(self, browser):
-        noticeboard = create(Builder('noticeboard').titled(u'Noticeboard'))
-        category = create(Builder('noticecategory')
-                          .having(conditions=RichTextValue('Something'))
-                          .titled(u'Category')
-                          .within(noticeboard))
-
+        board, category = self._create_content()
         browser.login().visit(category)
         factoriesmenu.add('Notice')
         browser.fill(
@@ -57,12 +60,7 @@ class TestContentTypes(FunctionalTestCase):
 
     @browsing
     def test_notice_default_value_email_field(self, browser):
-        noticeboard = create(Builder('noticeboard').titled(u'Noticeboard'))
-        category = create(Builder('noticecategory')
-                          .having(conditions=RichTextValue('Something'))
-                          .titled(u'Category')
-                          .within(noticeboard))
-
+        board, category = self._create_content()
         user = create(Builder('user').with_roles('Site Administrator'))
         login(self.portal, user.getId())
 
@@ -76,12 +74,7 @@ class TestContentTypes(FunctionalTestCase):
 
     @browsing
     def test_terms_and_conditions_need_to_be_accepted(self, browser):
-        noticeboard = create(Builder('noticeboard').titled(u'Noticeboard'))
-        category = create(Builder('noticecategory')
-                          .having(conditions=RichTextValue('Something'))
-                          .titled(u'Category')
-                          .within(noticeboard))
-
+        board, category = self._create_content()
         browser.login().visit(category)
         factoriesmenu.add('Notice')
         browser.fill(
