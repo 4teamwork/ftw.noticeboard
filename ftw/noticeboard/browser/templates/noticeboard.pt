@@ -40,6 +40,11 @@
 
 
     <div metal:fill-slot="content-core">
+
+        <div class="my-notices" tal:condition="python: view.name == 'noticeboard_view'">
+            <a href="./my-notices" i18n:translate="label_my_notices">My Notices</a>
+        </div>
+
         <ul tal:repeat="category view/get_categories_and_notices">
             <li>
                 <div class="collapsible-head"

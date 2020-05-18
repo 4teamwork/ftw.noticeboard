@@ -9,6 +9,10 @@ class NoticeBoardView(BrowserView):
     def get_title(self):
         return self.context.Title()
 
+    @property
+    def name(self):
+        return self.__name__
+
     def _get_base_query(self):
         return {'portal_type': 'ftw.noticeboard.Notice'}
 
