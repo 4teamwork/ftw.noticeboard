@@ -195,7 +195,11 @@
       <permission-role>Manager</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>
-    <permission-map name="ftw.noticeboard: Add NoticeImage" acquired="False"/>
+    <permission-map name="ftw.noticeboard: Add NoticeImage" acquired="False">
+      <permission-role>Manager</permission-role>
+      <permission-role>Owner</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
     <permission-map name="ftw.slider: Add Container" acquired="False">
       <permission-role>Authenticated</permission-role>
       <permission-role>Manager</permission-role>

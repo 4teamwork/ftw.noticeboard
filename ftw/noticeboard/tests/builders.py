@@ -1,4 +1,5 @@
 from ftw.builder import builder_registry
+from ftw.builder.content import ImageBuilderMixin
 from ftw.builder.dexterity import DexterityBuilder
 
 
@@ -21,3 +22,10 @@ class NoticeBuilder(DexterityBuilder):
 
 
 builder_registry.register('notice', NoticeBuilder)
+
+
+class NoticeImageBuilder(ImageBuilderMixin, DexterityBuilder):
+    portal_type = 'ftw.noticeboard.NoticeImage'
+
+
+builder_registry.register('noticeimage', NoticeImageBuilder)

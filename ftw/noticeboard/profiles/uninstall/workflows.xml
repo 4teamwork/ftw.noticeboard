@@ -6,5 +6,6 @@
     <type type_id="ftw.noticeboard.Notice" remove="True"/>
     <type type_id="ftw.noticeboard.NoticeBoard" remove="True"/>
     <type type_id="ftw.noticeboard.NoticeCategory" remove="True"/>
+    <type type_id="ftw.noticeboard.NoticeImage" remove="True"/>
   </bindings>
 </object>

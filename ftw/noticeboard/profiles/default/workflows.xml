@@ -11,5 +11,8 @@
      <type type_id="ftw.noticeboard.Notice">
       <bound-workflow workflow_id="noticeboard_workflow"/>
      </type>
+     <type type_id="ftw.noticeboard.NoticeImage">
+      <bound-workflow workflow_id="noticeboard_workflow"/>
+     </type>
   </bindings>
 </object>

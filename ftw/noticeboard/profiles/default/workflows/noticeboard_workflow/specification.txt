@@ -12,6 +12,7 @@ Role mapping:
 Status Visible:
   An Owner can always edit content.
   An Owner can always delete content.
+  An Owner can always add notice images.
 
   A User can add notices.
   A User can add content.

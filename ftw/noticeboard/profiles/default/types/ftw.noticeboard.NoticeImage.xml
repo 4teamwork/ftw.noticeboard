@@ -5,34 +5,32 @@
         i18n:domain="ftw.noticeboard">
 
     <!-- Basic metadata -->
-    <property name="title" i18n:translate="">Notice</property>
+    <property name="title" i18n:translate="">NoticeImage</property>
     <property name="description"></property>
     <property name="icon_expr"></property>
     <property name="allow_discussion">False</property>
     <property name="global_allow">False</property>
     <property name="filter_content_types">True</property>
     <property name="allowed_content_types">
-        <element value="ftw.noticeboard.NoticeImage" />
     </property>
 
     <!-- schema interface -->
-    <property name="schema">ftw.noticeboard.content.notice.INoticeSchema</property>
+    <property name="schema">ftw.noticeboard.content.image.INoticeImageSchema</property>
 
     <!-- class used for content items -->
-    <property name="klass">ftw.noticeboard.content.notice.Notice</property>
+    <property name="klass">ftw.noticeboard.content.image.NoticeImage</property>
 
     <!-- add permission -->
-    <property name="add_permission">ftw.noticeboard.AddNotice</property>
+    <property name="add_permission">ftw.noticeboard.AddNoticeImage</property>
 
     <!-- enabled behaviors -->
     <property name="behaviors">
         <element value="plone.app.content.interfaces.INameFromTitle" />
         <element value="plone.app.dexterity.behaviors.metadata.IBasic" />
-        <element value="ftw.noticeboard.content.behaviors.INoticePublication" />
     </property>
 
     <!-- View information -->
-    <property name="default_view">@@notice_view</property>
+    <property name="default_view">@@view</property>
     <property name="default_view_fallback">False</property>
     <property name="view_methods">
     </property>

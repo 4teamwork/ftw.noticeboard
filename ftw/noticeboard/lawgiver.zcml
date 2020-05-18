@@ -11,6 +11,11 @@
         />
 
     <lawgiver:map_permissions
+        action_group="add notice images"
+        permissions="ftw.noticeboard: Add NoticeImage"
+        />
+
+    <lawgiver:map_permissions
         action_group="manage noticeboards"
         permissions="ftw.noticeboard: Add NoticeCategory,
                      ftw.noticeboard: Add NoticeBoard"
