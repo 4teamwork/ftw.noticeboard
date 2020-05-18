@@ -34,6 +34,11 @@
     </head>
 
 
+    <metal:content-title fill-slot="content-title">
+        <h1 class="documentFirstHeading" tal:content="view/get_title" />
+    </metal:content-title>
+
+
     <div metal:fill-slot="content-core">
         <ul tal:repeat="category view/get_categories_and_notices">
             <li>

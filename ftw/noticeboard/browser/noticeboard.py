@@ -1,8 +1,13 @@
+from ftw.noticeboard import _
 from plone import api
+from zope.i18n import translate
 from zope.publisher.browser import BrowserView
 
 
 class NoticeBoardView(BrowserView):
+
+    def get_title(self):
+        return self.context.Title()
 
     def _get_base_query(self):
         return {'portal_type': 'ftw.noticeboard.Notice'}
@@ -43,6 +48,9 @@ class NoticeBoardView(BrowserView):
 
 
 class MyNoticesView(NoticeBoardView):
+
+    def get_title(self):
+        return translate(_(u'label_my_notices', default=u'My Notices'), context=self.request)
 
     def _get_base_query(self):
         query = super(MyNoticesView, self)._get_base_query()
