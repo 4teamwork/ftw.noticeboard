@@ -31,7 +31,7 @@ class TestNoticeBoardWorkflow(FunctionalTestCase):
 
         category = create(Builder('noticecategory').within(noticeboard))
         browser.visit(category)
-        factoriesmenu.add('Notice')
+        browser.css('a.add-link').first.click()  # factoriesmenu.add('Notice')
 
         browser.fill(
             {
@@ -71,7 +71,7 @@ class TestNoticeBoardWorkflow(FunctionalTestCase):
         self.assertFalse(factoriesmenu.visible())
 
         browser.visit(category)
-        factoriesmenu.add('Notice')
+        browser.css('a.add-link').first.click()  # factoriesmenu.add('Notice')
 
         browser.fill(
             {
@@ -105,7 +105,7 @@ class TestNoticeBoardWorkflow(FunctionalTestCase):
             browser.find_button_by_label('Delete').click()
 
         browser.visit(category)
-        factoriesmenu.add('Notice')
+        browser.css('a.add-link').first.click()  # factoriesmenu.add('Notice')
         browser.fill(
             {
                 'Title': u'This is a Notice',

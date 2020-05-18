@@ -39,6 +39,8 @@ class NoticeBoardView(BrowserView):
                     'id': category.id,
                     'url': category.absolute_url(),
                     'amount': len(notices),
+                    'addview': '{0}/++add++ftw.noticeboard.Notice'.format(category.absolute_url()),
+                    'canadd': api.user.has_permission('ftw.noticeboard: Add Notice', obj=category),
                     'notices': [
                         {
                             'title': notice.Title,
