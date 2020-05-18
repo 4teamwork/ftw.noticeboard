@@ -42,6 +42,6 @@
             </div>
         </div>
         <div class="notice-description" tal:condition="context/Description" tal:content="context/Description"/>
-        <div class="notice-text" tal:content="structure context/text/output"/>
+        <div class="notice-text" tal:content="structure context/text/output | nothing"/>
     </div>
 </html>
