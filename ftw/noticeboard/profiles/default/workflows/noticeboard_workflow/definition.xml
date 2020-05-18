@@ -21,6 +21,7 @@
   <permission>CMFEditions: Save new version</permission>
   <permission>Change local roles</permission>
   <permission>Delete objects</permission>
+  <permission>Delete portal content</permission>
   <permission>Edit comments</permission>
   <permission>List folder contents</permission>
   <permission>Manage properties</permission>
@@ -144,6 +145,11 @@
     </permission-map>
     <permission-map name="Change local roles" acquired="False"/>
     <permission-map name="Delete objects" acquired="False">
+      <permission-role>Authenticated</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="Delete portal content" acquired="False">
       <permission-role>Manager</permission-role>
       <permission-role>Owner</permission-role>
       <permission-role>Site Administrator</permission-role>
