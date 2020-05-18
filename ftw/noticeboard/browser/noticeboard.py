@@ -6,6 +6,12 @@ from zope.publisher.browser import BrowserView
 
 class NoticeBoardView(BrowserView):
 
+    def __call__(self):
+        user_roles = api.user.get_roles(obj=self.context)
+        if not {'Manager', 'Site Administrator'} & set(user_roles):
+            self.request.set('disable_border', True)
+        return super(NoticeBoardView, self).__call__()
+
     def get_title(self):
         return self.context.Title()
 
