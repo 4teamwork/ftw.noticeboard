@@ -10,6 +10,7 @@
     <include package=".browser" />
     <include package=".content" />
     <include file="resources.zcml" />
+    <include file="lawgiver.zcml" />
 
     <genericsetup:registerProfile
         name="default"

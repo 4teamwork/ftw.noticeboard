@@ -31,7 +31,7 @@ class TestNoticeView(FunctionalTestCase):
         notice = self._create_content()
 
         for number in range(4):
-            create(Builder('image').within(notice).with_dummy_content())
+            create(Builder('noticeimage').within(notice).with_dummy_content())
 
         browser.login().visit(notice)
         self.assertEqual(

@@ -6,7 +6,7 @@
                 type="collective.quickupload.QuickUploadPortlet"
                 name="quickupload">
         <property name="header">Upload</property>
-        <property name="upload_portal_type">Image</property>
+        <property name="upload_portal_type">ftw.noticeboard.NoticeImage</property>
     </assignment>
  -->
 

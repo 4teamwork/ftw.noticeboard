@@ -3,4 +3,5 @@
   <object name="ftw.noticeboard.Notice" meta_type="Dexterity FTI" remove="True" />
   <object name="ftw.noticeboard.NoticeCategory" meta_type="Dexterity FTI" remove="True" />
   <object name="ftw.noticeboard.NoticeBoard" meta_type="Dexterity FTI" remove="True" />
+  <object name="ftw.noticeboard.NoticeImage" meta_type="Dexterity FTI" remove="True" />
 </object>

@@ -47,13 +47,14 @@ setup(
 
     install_requires=[
         'Plone',
-        'setuptools',
-        'ftw.upgrade',
         'collective.quickupload',
         'ftw.datepicker',
+        'ftw.lawgiver',
         'ftw.slider',
         'ftw.theming',
+        'ftw.upgrade',
         'plone.api',
+        'setuptools',
     ],
 
     tests_require=tests_require,

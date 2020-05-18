@@ -17,4 +17,9 @@
         id="ftw.noticeboard.AddNoticeBoard"
         title="ftw.noticeboard: Add NoticeBoard"
         />
+
+    <permission
+        id="ftw.noticeboard.AddNoticeImage"
+        title="ftw.noticeboard: Add NoticeImage"
+        />
 </configure>
