@@ -65,7 +65,8 @@ class AcceptedTermsAndConditions(validator.SimpleFieldValidator):
 
     def validate(self, value):
         if not value:
-            raise Invalid(_(u'You need to accept the terms and conditions'))
+            raise Invalid(_(u'error_not_accepted',
+                            default=u'You need to accept the terms and conditions'))
         return
 
 
