@@ -42,7 +42,7 @@
                      aria-disabled="true"
                      tal:attributes="id category/id;
                                      aria-controls string:content-${category/id}">
-                    <h2 tal:content="category/title" />
+                    <h2 tal:content="string:${category/title} (${category/amount})" />
                     <span class="icon" />
                 </div>
                 <div class="collabsible-content"

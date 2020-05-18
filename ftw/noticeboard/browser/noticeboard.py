@@ -29,6 +29,7 @@ class NoticeBoardView(BrowserView):
                     'title': category.Title,
                     'id': category.id,
                     'url': category.absolute_url(),
+                    'amount': len(notices),
                     'notices': [
                         {
                             'title': notice.Title,
