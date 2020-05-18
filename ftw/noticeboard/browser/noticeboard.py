@@ -4,6 +4,9 @@ from zope.publisher.browser import BrowserView
 
 class NoticeBoardView(BrowserView):
 
+    def _get_base_query(self):
+        return {'portal_type': 'ftw.noticeboard.Notice'}
+
     def get_categories(self):
         return self.context.listFolderContents()  # not a catalog query
 
@@ -18,8 +21,9 @@ class NoticeBoardView(BrowserView):
         results = []
 
         for category in self.get_categories():
-            notices = catalog(path='/'.join(category.getPhysicalPath()),
-                              portal_type='ftw.noticeboard.Notice')
+            query = self._get_base_query()
+            query['path'] = '/'.join(category.getPhysicalPath())
+            notices = catalog(**query)
             results.append(
                 {
                     'title': category.Title,
@@ -35,3 +39,16 @@ class NoticeBoardView(BrowserView):
                 }
             )
         return results
+
+
+class MyNoticesView(NoticeBoardView):
+
+    def _get_base_query(self):
+        query = super(MyNoticesView, self)._get_base_query()
+        query.update(
+            {
+                'show_inactive': True,
+                'Creator': api.user.get_current().getId()
+            }
+        )
+        return query
