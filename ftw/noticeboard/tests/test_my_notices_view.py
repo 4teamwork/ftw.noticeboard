@@ -55,13 +55,13 @@ class TestMyNoticeBoardView(FunctionalTestCase):
 
         browser.login(user).visit(board)
         self.assertFalse(
-            len(browser.css('.collabsible-content h3')),
+            len(browser.css('.collapsible-content h3')),
             'Expect no notices, since all of them are expired'
         )
 
         browser.login(user).visit(board, view='my-notices')
         self.assertEqual(
             1,
-            len(browser.css('.collabsible-content h3')),
+            len(browser.css('.collapsible-content h3')),
             'Expect one notices, since the logged in user is owner of 1 Notice'
         )

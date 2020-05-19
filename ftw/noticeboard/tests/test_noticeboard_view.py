@@ -53,13 +53,13 @@ class TestNoticeBoardView(FunctionalTestCase):
 
         self.assertEquals(
             3,
-            len(browser.css('.collabsible-content').first.css('h3')),
+            len(browser.css('.collapsible-content').first.css('h3')),
             'Expect 3 notices in first category'
         )
 
         self.assertEquals(
             1,
-            len(browser.css('.collabsible-content')[1].css('h3')),
+            len(browser.css('.collapsible-content')[1].css('h3')),
             'Expect 1 notice in second category'
         )
 
@@ -70,7 +70,7 @@ class TestNoticeBoardView(FunctionalTestCase):
 
         browser.login().visit(noticeboard)
         # Click on first link in first category
-        browser.css('.collabsible-content').first.css('h3 a').first.click()
+        browser.css('.collapsible-content').first.css('h3 a').first.click()
         self.assertEqual(notice.absolute_url(), browser.url)
 
     @browsing
@@ -80,12 +80,12 @@ class TestNoticeBoardView(FunctionalTestCase):
 
         self.assertEqual(
             1,
-            len(browser.css('.collabsible-content')),
+            len(browser.css('.collapsible-content')),
             'Expect 1 content area')
 
         self.assertEquals(
             3,
-            len(browser.css('.collabsible-content').css('h3')),
+            len(browser.css('.collapsible-content').css('h3')),
             'Expect 3 notices in first category'
         )
 
@@ -93,6 +93,6 @@ class TestNoticeBoardView(FunctionalTestCase):
 
         self.assertEquals(
             1,
-            len(browser.css('.collabsible-content').css('h3')),
+            len(browser.css('.collapsible-content').css('h3')),
             'Expect 1 notice in second category'
         )
