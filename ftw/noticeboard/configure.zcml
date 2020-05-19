@@ -3,9 +3,12 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:five="http://namespaces.zope.org/five"
     xmlns:upgrade-step="http://namespaces.zope.org/ftw.upgrade"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
     i18n_domain="ftw.noticeboard">
 
     <five:registerPackage package="." initialize=".initialize" />
+    <i18n:registerTranslations directory="locales" />
+
     <include file="permissions.zcml" />
     <include package=".browser" />
     <include package=".content" />
