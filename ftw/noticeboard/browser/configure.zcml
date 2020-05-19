@@ -29,6 +29,14 @@
         />
 
     <browser:page
+        for="ftw.noticeboard.content.noticeboard.INoticeBoard"
+        name="my-notices"
+        permission="zope2.View"
+        class=".noticeboard.MyNoticesView"
+        template="templates/noticeboard.pt"
+        />
+
+    <browser:page
         for="ftw.noticeboard.content.category.INoticeCategory"
         name="category_view"
         permission="zope2.View"

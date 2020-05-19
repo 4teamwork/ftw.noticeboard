@@ -46,7 +46,7 @@ class TestNoticeBoardView(FunctionalTestCase):
         browser.login().visit(noticeboard)
 
         self.assertListEqual(
-            ['Category 1', 'Category 2'],
+            ['Category 1 (3)', 'Category 2 (1)'],
             browser.css('.template-noticeboard_view .collapsible-head').text,
             'Expected two categories'
         )
