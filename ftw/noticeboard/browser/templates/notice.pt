@@ -20,15 +20,16 @@
     </head>
 
     <div metal:fill-slot="main">
-        <div class="notice-detail-wrapper">
-            <div class="notice-image-slider">
-                <tal:images repeat="image context/listFolderContents">
+        <div class="notice-detail-wrapper" tal:define="images context/listFolderContents">
+            <div class="notice-image-slider" tal:condition="images">
+                <tal:images repeat="image images">
                     <div>
-                        <img tal:replace="structure image/images/image/large" />
+                        <img tal:define="scales image/@@images"
+                             tal:replace="structure python:scales.scale('image', width=400, height=400, direction='down').tag()" />
                     </div>
                 </tal:images>
             </div>
-            <div class="notice-details">
+            <div class="notice-details" tal:attributes="class python:images and 'notice-details' or 'notice-details no-images'">
                 <span class="expiration-date" tal:content="view/get_localized_expiration_date"/>
                 <h1 class="documentFirstHeading" tal:content="context/title"/>
                 <div class="price">

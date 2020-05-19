@@ -55,7 +55,7 @@
                     <h2 tal:content="string:${category/title} (${category/amount})" />
                     <span class="icon" />
                 </div>
-                <div class="collabsible-content"
+                <div class="collapsible-content"
                      tal:attributes="aria-labelledby category/id;
                                     id string:content-{category/id}"
                      role="region" hidden>

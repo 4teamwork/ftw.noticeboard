@@ -89,3 +89,7 @@ class TestContentTypes(FunctionalTestCase):
         browser.find_button_by_label('Save').click()
         self.assertEquals(u'Add Notice', plone.first_heading())
         statusmessages.assert_message('There were some errors.')
+        self.assertEqual(
+            u'You need to accept the terms and conditions',
+            browser.css('.fieldErrorBox > .error').first.text
+        )
