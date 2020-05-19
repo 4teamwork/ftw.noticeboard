@@ -4,6 +4,7 @@
     xmlns:five="http://namespaces.zope.org/five"
     xmlns:upgrade-step="http://namespaces.zope.org/ftw.upgrade"
     xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:profilehook="http://namespaces.zope.org/profilehook"
     i18n_domain="ftw.noticeboard">
 
     <five:registerPackage package="." initialize=".initialize" />
@@ -20,6 +21,11 @@
         title="ftw.noticeboard default"
         directory="profiles/default"
         provides="Products.GenericSetup.interfaces.EXTENSION"
+        />
+
+    <profilehook:hook
+        profile="ftw.noticeboard:default"
+        handler=".hooks.add_quickupload_portlet"
         />
 
     <genericsetup:registerProfile
