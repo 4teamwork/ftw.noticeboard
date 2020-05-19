@@ -50,6 +50,7 @@ setup(
         'collective.quickupload',
         'ftw.datepicker',
         'ftw.lawgiver [deletepermission]',
+        'ftw.profilehook',
         'ftw.slider',
         'ftw.theming',
         'ftw.upgrade',
