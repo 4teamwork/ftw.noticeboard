@@ -6,8 +6,18 @@ from zope.publisher.browser import BrowserView
 
 class NoticeBoardView(BrowserView):
 
+    def __call__(self):
+        user_roles = api.user.get_roles(obj=self.context)
+        if not {'Manager', 'Site Administrator'} & set(user_roles):
+            self.request.set('disable_border', True)
+        return super(NoticeBoardView, self).__call__()
+
     def get_title(self):
         return self.context.Title()
+
+    @property
+    def name(self):
+        return self.__name__
 
     def _get_base_query(self):
         return {'portal_type': 'ftw.noticeboard.Notice'}
@@ -35,6 +45,8 @@ class NoticeBoardView(BrowserView):
                     'id': category.id,
                     'url': category.absolute_url(),
                     'amount': len(notices),
+                    'addview': '{0}/++add++ftw.noticeboard.Notice'.format(category.absolute_url()),
+                    'canadd': api.user.has_permission('ftw.noticeboard: Add Notice', obj=category),
                     'notices': [
                         {
                             'title': notice.Title,

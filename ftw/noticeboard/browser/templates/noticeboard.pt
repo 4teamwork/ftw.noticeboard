@@ -40,6 +40,11 @@
 
 
     <div metal:fill-slot="content-core">
+
+        <div class="my-notices" tal:condition="python: view.name == 'noticeboard_view'">
+            <a href="./my-notices" i18n:translate="label_my_notices">My Notices</a>
+        </div>
+
         <ul tal:repeat="category view/get_categories_and_notices">
             <li>
                 <div class="collapsible-head"
@@ -54,6 +59,11 @@
                      tal:attributes="aria-labelledby category/id;
                                     id string:content-{category/id}"
                      role="region" hidden>
+
+                     <tal:addlink condition="category/canadd">
+                        <a class="add-link" tal:attributes="href category/addview" i18n:translate="label_add_new_notice">Add new Notice to this categroy</a>
+                     </tal:addlink>
+
                     <tal:notices repeat="notice category/notices">
                         <div class="notice-wrapper">
                             <span class="expiration-date" tal:content="notice/expires"/>
