@@ -7,7 +7,7 @@
 
     <theme:resources profile="ftw.noticeboard:default" slot="addon">
         <theme:scss file="browser/resources/icons.scss" />
-        <theme:scss file="browser/resources/slider.scss" />
+        <theme:scss file="browser/resources/styles.scss" />
         <theme:scss file="browser/resources/slider.scss" />
     </theme:resources>
 
