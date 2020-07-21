@@ -11,6 +11,7 @@ def add_quickupload_portlet(portal):
     # Thus we avoid to setup the portlet in tests.
     # Note to future me: If you ever wanna reliable produce a segmentation fault,
     # just remove the condition :-D
+    return
     if portal.REQUEST.URL not in ['http://foo', 'http://nohost']:
         manager = getUtility(IPortletManager, name='plone.rightcolumn')
         category = manager.get(CONTENT_TYPE_CATEGORY)
