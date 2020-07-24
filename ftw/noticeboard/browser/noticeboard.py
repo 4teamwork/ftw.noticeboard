@@ -1,3 +1,4 @@
+from copy import deepcopy
 from ftw.noticeboard import _
 from plone import api
 from zope.i18n import translate
@@ -65,7 +66,7 @@ class MyNoticesView(NoticeBoardView):
         return translate(_(u'label_my_notices', default=u'My Notices'), context=self.request)
 
     def _get_base_query(self):
-        query = super(MyNoticesView, self)._get_base_query()
+        query = deepcopy(super(MyNoticesView, self)._get_base_query())
         query.update(
             {
                 'show_inactive': True,

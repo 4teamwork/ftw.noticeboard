@@ -8,7 +8,9 @@ $noticebard-bg-collapsible-head-open: $color-primary !default;
                            noticebard-bg-collapsible-head-open);
 
 
-.template-noticeboard_view {
+.template-noticeboard_view,
+.template-my-notices,
+.template-category_view {
 
   .my-notices {
     margin: $margin-vertical 0;

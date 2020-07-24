@@ -20,7 +20,8 @@ class INotice(Interface):
 
 def user_mail():
     if not api.user.is_anonymous():
-        return safe_unicode(api.user.get_current().getProperty('email'))
+        email = api.user.get_current().getProperty('email')
+        return safe_unicode(email) or u''
     return u''
 
 
