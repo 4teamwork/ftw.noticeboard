@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-05-18 11:27+0000\n"
+"POT-Creation-Date: 2020-09-07 08:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,7 +43,7 @@ msgid "Terms and conditions for \"${title}\""
 msgstr ""
 
 #. Default: "Please accept the <a target=\"_blank\" href=\"./terms-and-conditions\">terms and conditions</a>"
-#: ./ftw/noticeboard/content/notice.py:50
+#: ./ftw/noticeboard/content/notice.py:51
 msgid "description_accept_conditions"
 msgstr ""
 
@@ -52,21 +52,26 @@ msgstr ""
 msgid "description_conditions"
 msgstr ""
 
+#. Default: "(Edit)"
+#: ./ftw/noticeboard/browser/templates/notice.pt:36
+msgid "edit"
+msgstr ""
+
 #. Default: "You need to accept the terms and conditions"
-#: ./ftw/noticeboard/content/notice.py:68
+#: ./ftw/noticeboard/content/notice.py:69
 msgid "error_not_accepted"
 msgstr ""
 
-#: ./ftw/noticeboard/configure.zcml:23
+#: ./ftw/noticeboard/configure.zcml:24
 msgid "ftw.noticeboard default"
 msgstr ""
 
-#: ./ftw/noticeboard/configure.zcml:31
+#: ./ftw/noticeboard/configure.zcml:37
 msgid "ftw.noticeboard:uninstall"
 msgstr ""
 
 #. Default: "Terms and Conditions"
-#: ./ftw/noticeboard/content/notice.py:49
+#: ./ftw/noticeboard/content/notice.py:50
 msgid "label_accept_conditions"
 msgstr ""
 
@@ -81,12 +86,12 @@ msgid "label_conditions"
 msgstr ""
 
 #. Default: "Contact"
-#: ./ftw/noticeboard/browser/templates/notice.pt:39
+#: ./ftw/noticeboard/browser/templates/notice.pt:44
 msgid "label_contact"
 msgstr ""
 
 #. Default: "E-Mail"
-#: ./ftw/noticeboard/content/notice.py:36
+#: ./ftw/noticeboard/content/notice.py:37
 msgid "label_email"
 msgstr ""
 
@@ -96,19 +101,19 @@ msgid "label_image"
 msgstr ""
 
 #. Default: "My Notices"
-#: ./ftw/noticeboard/browser/noticeboard.py:65
+#: ./ftw/noticeboard/browser/noticeboard.py:71
 #: ./ftw/noticeboard/browser/templates/noticeboard.pt:45
 msgid "label_my_notices"
 msgstr ""
 
 #. Default: "Price"
-#: ./ftw/noticeboard/browser/templates/notice.pt:35
-#: ./ftw/noticeboard/content/notice.py:31
+#: ./ftw/noticeboard/browser/templates/notice.pt:40
+#: ./ftw/noticeboard/content/notice.py:32
 msgid "label_price"
 msgstr ""
 
 #. Default: "Text"
-#: ./ftw/noticeboard/content/notice.py:42
+#: ./ftw/noticeboard/content/notice.py:43
 msgid "label_text"
 msgstr ""
 

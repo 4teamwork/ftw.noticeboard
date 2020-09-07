@@ -31,7 +31,11 @@
             </div>
             <div class="notice-details" tal:attributes="class python:images and 'notice-details' or 'notice-details no-images'">
                 <span class="expiration-date" tal:content="view/get_localized_expiration_date"/>
-                <h1 class="documentFirstHeading" tal:content="context/title"/>
+                <h1 class="documentFirstHeading">
+                    <tal:title replace="context/title"/>
+                    <a class="edit-notice" tal:condition="view/can_edit" tal:attributes="href python:context.absolute_url() + '/edit'" i18n:translate="edit">(Edit)</a>
+                </h1>
+
                 <div class="price">
                     <span class="label" i18n:translate="label_price">Price</span>
                     <span class="value" tal:content="context/price" />

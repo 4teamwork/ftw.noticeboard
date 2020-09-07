@@ -1,4 +1,4 @@
-from copy import deepcopy
+from DateTime import DateTime
 from ftw.noticeboard import _
 from plone import api
 from zope.i18n import translate
@@ -21,7 +21,12 @@ class NoticeBoardView(BrowserView):
         return self.__name__
 
     def _get_base_query(self):
-        return {'portal_type': 'ftw.noticeboard.Notice'}
+        now = DateTime()
+        return {
+            'portal_type': 'ftw.noticeboard.Notice',
+            'effective': {'query': now, 'range': 'max'},
+            'expires': {'query': now, 'range': 'min'}
+        }
 
     def get_categories(self):
         return self.context.listFolderContents()  # not a catalog query
@@ -66,11 +71,9 @@ class MyNoticesView(NoticeBoardView):
         return translate(_(u'label_my_notices', default=u'My Notices'), context=self.request)
 
     def _get_base_query(self):
-        query = deepcopy(super(MyNoticesView, self)._get_base_query())
-        query.update(
-            {
+        query = {
+                'portal_type': 'ftw.noticeboard.Notice',
                 'show_inactive': True,
                 'Creator': api.user.get_current().getId()
             }
-        )
         return query
