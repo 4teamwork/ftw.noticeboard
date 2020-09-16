@@ -5,7 +5,8 @@ Changelog
 1.0.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Due a bug in plone.dexterity, defaultFactory did not work before release 2.5.x.
+  This implements a workaround using z3c form default adapter. [mathias.leimgruber]
 
 
 1.0.1 (2020-09-07)
