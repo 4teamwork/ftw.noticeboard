@@ -7,6 +7,7 @@ from plone.dexterity.content import Container
 from plone.dexterity.utils import safe_unicode
 from plone.supermodel import model
 from z3c.form import validator
+from z3c.form import widget
 from zope import schema
 from zope.interface import alsoProvides
 from zope.interface import implements
@@ -36,7 +37,6 @@ class INoticeSchema(model.Schema):
     email = schema.TextLine(
         title=_(u'label_email', default=u'E-Mail'),
         required=True,
-        defaultFactory=user_mail,
     )
 
     text = RichText(
@@ -52,6 +52,12 @@ class INoticeSchema(model.Schema):
                       default=u'Please accept the '
                       '<a target="_blank" href="./terms-and-conditions">terms and conditions</a>'),
         default=False)
+
+
+default_email = widget.ComputedWidgetAttribute(
+    lambda adapter: user_mail(),
+    field=INoticeSchema['email'],
+)
 
 
 class Notice(Container):
