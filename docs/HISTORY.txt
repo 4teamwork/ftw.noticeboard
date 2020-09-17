@@ -5,7 +5,7 @@ Changelog
 1.0.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix typo in styles scss for categories view. [mathias.leimgruber]
 
 
 1.0.2 (2020-09-16)
