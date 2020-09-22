@@ -8,5 +8,6 @@
         <dependency>profile-ftw.upgrade:default</dependency>
         <dependency>profile-ftw.theming:default</dependency>
         <dependency>profile-ftw.slider:default</dependency>
+        <dependency>profile-ftw.colorbox:default</dependency>
     </dependencies>
 </metadata>

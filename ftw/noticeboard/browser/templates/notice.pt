@@ -24,8 +24,13 @@
             <div class="notice-image-slider" tal:condition="images">
                 <tal:images repeat="image images">
                     <div>
-                        <img tal:define="scales image/@@images"
-                             tal:replace="structure python:scales.scale('image', width=400, height=400, direction='down').tag()" />
+                        <a class="colorboxLink"
+                           rel="colorbox"
+                           tal:define="scales image/@@images"
+                           tal:attributes="href python:scales.scale('image', scale='colorbox').url;
+                                           title image/Title">
+                            <img tal:replace="structure python:scales.scale('image', width=400, height=400, direction='down').tag()" />
+                             </a>
                     </div>
                 </tal:images>
             </div>

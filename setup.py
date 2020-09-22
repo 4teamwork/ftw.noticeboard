@@ -49,6 +49,7 @@ setup(
         'Plone',
         'collective.quickupload',
         'ftw.datepicker',
+        'ftw.colorbox',
         'ftw.lawgiver [deletepermission]',
         'ftw.profilehook',
         'ftw.slider',
