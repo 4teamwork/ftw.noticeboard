@@ -25,7 +25,8 @@ class NoticeBoardView(BrowserView):
         return {
             'portal_type': 'ftw.noticeboard.Notice',
             'effective': {'query': now, 'range': 'max'},
-            'expires': {'query': now, 'range': 'min'}
+            'expires': {'query': now, 'range': 'min'},
+            'sort_on': 'expires'
         }
 
     def get_categories(self):
@@ -74,6 +75,7 @@ class MyNoticesView(NoticeBoardView):
         query = {
                 'portal_type': 'ftw.noticeboard.Notice',
                 'show_inactive': True,
-                'Creator': api.user.get_current().getId()
+                'Creator': api.user.get_current().getId(),
+                'sort_on': 'expires'
             }
         return query
