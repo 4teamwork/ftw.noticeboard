@@ -40,5 +40,5 @@ class TestNoticeView(FunctionalTestCase):
             'Expect 4 images'
         )
 
-        self.assertEquals(u'This is a N\xf6tice (Edit)', plone.first_heading())
+        self.assertEquals(u'This is a N\xf6tice', plone.first_heading())
         self.assertEquals(u'S\xf6mething', browser.css('.notice-text').first.text)

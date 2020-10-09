@@ -56,7 +56,7 @@ class TestContentTypes(FunctionalTestCase):
             }
         )
         browser.find_button_by_label('Save').click()
-        self.assertEquals(u'This is a Notice (Edit)', plone.first_heading())
+        self.assertEquals(u'This is a Notice', plone.first_heading())
 
     @browsing
     def test_notice_default_value_email_field(self, browser):

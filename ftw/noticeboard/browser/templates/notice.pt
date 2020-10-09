@@ -20,6 +20,12 @@
     </head>
 
     <div metal:fill-slot="main">
+        <div class="noticeboard-actions">
+            Aktionen: <a class="edit-notice" tal:condition="view/can_edit" tal:attributes="href python:context.absolute_url() + '/edit'" i18n:translate="edit">Edit</a> | 
+            <a class="edit-notice" tal:condition="view/can_edit" tal:attributes="href python:context.absolute_url() + '/folder_contents'" i18n:translate="edit_images">Edit images</a> | 
+            <a class="edit-notice" tal:condition="view/can_edit" tal:attributes="href python:context.absolute_url() + '/delete_confirmation'" i18n:translate="delete_images">Delete notice</a>
+        </div>
+
         <div class="notice-detail-wrapper" tal:define="images context/listFolderContents">
             <div class="notice-image-slider" tal:condition="images">
                 <tal:images repeat="image images">
@@ -38,7 +44,6 @@
                 <span class="expiration-date" tal:content="view/get_localized_expiration_date"/>
                 <h1 class="documentFirstHeading">
                     <tal:title replace="context/title"/>
-                    <a class="edit-notice" tal:condition="view/can_edit" tal:attributes="href python:context.absolute_url() + '/edit'" i18n:translate="edit">(Edit)</a>
                 </h1>
 
                 <div class="price">

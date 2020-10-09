@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-09-07 08:00+0000\n"
+"POT-Creation-Date: 2020-10-09 07:03+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,11 +14,11 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0\n"
 "Preferred-Encodings: utf-8 latin1\n"
 
-#: ./ftw/noticeboard/content/configure.zcml:14
+#: ./ftw/noticeboard/content/configure.zcml:15
 msgid "Adds effective date and expiration date fields to Notices"
 msgstr ""
 
-#: ./ftw/noticeboard/content/configure.zcml:14
+#: ./ftw/noticeboard/content/configure.zcml:15
 msgid "Date range for Notices"
 msgstr ""
 
@@ -42,6 +42,11 @@ msgstr "Bild"
 msgid "Terms and conditions for \"${title}\""
 msgstr "Nutzungsbedinungen für \"${title}\""
 
+#. Default: "Delete notice"
+#: ./ftw/noticeboard/browser/templates/notice.pt:25
+msgid "delete_images"
+msgstr "Anzeige Löschen"
+
 #. Default: "Please accept the <a target=\"_blank\" href=\"./terms-and-conditions\">terms and conditions</a>"
 #: ./ftw/noticeboard/content/notice.py:51
 msgid "description_accept_conditions"
@@ -52,13 +57,18 @@ msgstr "Die <a target=\"_blank\" href=\"./terms-and-conditions\">Nutzungsbedingu
 msgid "description_conditions"
 msgstr "Die a angegebenen Nutzungsbedingungen müssen von jedem Benutzer akzeptiert werden, damit dieser ein Anzeige erfassen kann."
 
-#. Default: "(Edit)"
-#: ./ftw/noticeboard/browser/templates/notice.pt:36
+#. Default: "Edit"
+#: ./ftw/noticeboard/browser/templates/notice.pt:23
 msgid "edit"
-msgstr "(Bearbeiten)"
+msgstr "Bearbeiten"
+
+#. Default: "Edit images"
+#: ./ftw/noticeboard/browser/templates/notice.pt:24
+msgid "edit_images"
+msgstr "Bilder bearbeiten"
 
 #. Default: "You need to accept the terms and conditions"
-#: ./ftw/noticeboard/content/notice.py:69
+#: ./ftw/noticeboard/content/notice.py:75
 msgid "error_not_accepted"
 msgstr "Sie müssen die Nutzungsbedingungen akzeptieren"
 
@@ -86,12 +96,12 @@ msgid "label_conditions"
 msgstr "Nutzungsbedingungen"
 
 #. Default: "Contact"
-#: ./ftw/noticeboard/browser/templates/notice.pt:44
+#: ./ftw/noticeboard/browser/templates/notice.pt:53
 msgid "label_contact"
 msgstr "Kontakt"
 
 #. Default: "E-Mail"
-#: ./ftw/noticeboard/content/notice.py:37
+#: ./ftw/noticeboard/content/notice.py:38
 msgid "label_email"
 msgstr "E-Mail (oder z.B Telefonnummer)"
 
@@ -101,14 +111,14 @@ msgid "label_image"
 msgstr "Bild"
 
 #. Default: "My Notices"
-#: ./ftw/noticeboard/browser/noticeboard.py:71
+#: ./ftw/noticeboard/browser/noticeboard.py:72
 #: ./ftw/noticeboard/browser/templates/noticeboard.pt:45
 msgid "label_my_notices"
 msgstr "Alle \"Meine Anzeigen\" auflisten"
 
 #. Default: "Price"
-#: ./ftw/noticeboard/browser/templates/notice.pt:40
-#: ./ftw/noticeboard/content/notice.py:32
+#: ./ftw/noticeboard/browser/templates/notice.pt:49
+#: ./ftw/noticeboard/content/notice.py:33
 msgid "label_price"
 msgstr "Preis"
 
