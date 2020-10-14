@@ -43,7 +43,7 @@ class TestNoticeBoardWorkflow(FunctionalTestCase):
             }
         )
         browser.find_button_by_label('Save').click()
-        self.assertEquals(u'This is a Notice (Edit)', plone.first_heading())
+        self.assertEquals(u'This is a Notice', plone.first_heading())
 
         browser.visit('@@edit')
         browser.fill(
@@ -52,7 +52,7 @@ class TestNoticeBoardWorkflow(FunctionalTestCase):
             }
         )
         browser.find_button_by_label('Save').click()
-        self.assertEquals(u'Changed (Edit)', plone.first_heading())
+        self.assertEquals(u'Changed', plone.first_heading())
 
     @browsing
     def test_user_can_only_add_images_on_notices_he_created(self, browser):
