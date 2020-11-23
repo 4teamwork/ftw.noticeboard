@@ -10,6 +10,7 @@
               (function($){
                 const config = {
                     adaptiveHeight: true,
+                    infinite: false,
                 }
                 $(document).ready(function(){
                   $('.notice-image-slider').slick(config);
