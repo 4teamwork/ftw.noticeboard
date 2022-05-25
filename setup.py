@@ -13,6 +13,9 @@ tests_require = [
 
 extras_require = {
     'tests': tests_require,
+    'plone4': [
+        'collective.quickupload'
+    ]
 }
 
 
@@ -28,6 +31,7 @@ setup(
     classifiers=[
         'Framework :: Plone',
         'Framework :: Plone :: 4.3',
+        'Framework :: Plone :: 5.1',
         'License :: OSI Approved :: GNU General Public License (GPL)',
         'Programming Language :: Python',
         'Programming Language :: Python :: 2.7',
@@ -47,7 +51,6 @@ setup(
 
     install_requires=[
         'Plone',
-        'collective.quickupload',
         'ftw.datepicker',
         'ftw.colorbox',
         'ftw.lawgiver [deletepermission]',
