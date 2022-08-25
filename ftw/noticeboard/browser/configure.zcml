@@ -52,5 +52,19 @@
         template="templates/notice.pt"
         />
 
+    <browser:page
+        for="ftw.noticeboard.content.notice.INotice"
+        name="upload"
+        permission="zope2.View"
+        template="templates/upload.pt"
+        />
+
+    <browser:page
+        name="fileUpload"
+        for="ftw.noticeboard.content.notice.INotice"
+        layer="ftw.noticeboard.interfaces.IFtwNoticeboardLayer"
+        class=".notice.ImageUploadView"
+        permission="zope2.View"
+        />
 
 </configure>
