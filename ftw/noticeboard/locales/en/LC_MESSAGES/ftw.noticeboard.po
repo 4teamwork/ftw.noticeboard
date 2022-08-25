@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-10-09 07:03+0000\n"
+"POT-Creation-Date: 2022-08-25 12:55+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,8 +42,13 @@ msgstr ""
 msgid "Terms and conditions for \"${title}\""
 msgstr ""
 
+#. Default: "Add images"
+#: ./ftw/noticeboard/browser/templates/notice.pt:26
+msgid "add_images"
+msgstr ""
+
 #. Default: "Delete notice"
-#: ./ftw/noticeboard/browser/templates/notice.pt:25
+#: ./ftw/noticeboard/browser/templates/notice.pt:32
 msgid "delete_images"
 msgstr ""
 
@@ -58,12 +63,12 @@ msgid "description_conditions"
 msgstr ""
 
 #. Default: "Edit"
-#: ./ftw/noticeboard/browser/templates/notice.pt:23
+#: ./ftw/noticeboard/browser/templates/notice.pt:25
 msgid "edit"
 msgstr ""
 
 #. Default: "Edit images"
-#: ./ftw/noticeboard/browser/templates/notice.pt:24
+#: ./ftw/noticeboard/browser/templates/notice.pt:31
 msgid "edit_images"
 msgstr ""
 
@@ -72,11 +77,11 @@ msgstr ""
 msgid "error_not_accepted"
 msgstr ""
 
-#: ./ftw/noticeboard/configure.zcml:24
+#: ./ftw/noticeboard/configure.zcml:25
 msgid "ftw.noticeboard default"
 msgstr ""
 
-#: ./ftw/noticeboard/configure.zcml:37
+#: ./ftw/noticeboard/configure.zcml:41
 msgid "ftw.noticeboard:uninstall"
 msgstr ""
 
@@ -96,7 +101,7 @@ msgid "label_conditions"
 msgstr ""
 
 #. Default: "Contact"
-#: ./ftw/noticeboard/browser/templates/notice.pt:53
+#: ./ftw/noticeboard/browser/templates/notice.pt:60
 msgid "label_contact"
 msgstr ""
 
@@ -117,7 +122,7 @@ msgid "label_my_notices"
 msgstr ""
 
 #. Default: "Price"
-#: ./ftw/noticeboard/browser/templates/notice.pt:49
+#: ./ftw/noticeboard/browser/templates/notice.pt:56
 #: ./ftw/noticeboard/content/notice.py:33
 msgid "label_price"
 msgstr ""
