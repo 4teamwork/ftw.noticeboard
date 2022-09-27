@@ -52,5 +52,21 @@
         template="templates/notice.pt"
         />
 
+    <configure zcml:condition="have plone-5">
+        <browser:page
+            for="ftw.noticeboard.content.notice.INotice"
+            name="upload"
+            permission="zope2.View"
+            template="templates/upload.pt"
+            />
+
+        <browser:page
+            name="fileUpload"
+            for="ftw.noticeboard.content.notice.INotice"
+            layer="ftw.noticeboard.interfaces.IFtwNoticeboardLayer"
+            class=".fileupload.ImageUploadView"
+            permission="zope2.View"
+            />
+    </configure>
 
 </configure>

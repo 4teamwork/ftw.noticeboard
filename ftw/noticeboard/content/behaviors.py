@@ -1,5 +1,5 @@
 from ftw.datepicker.widget import DateTimePickerWidgetFactory
-from plone.app.dexterity import PloneMessageFactory as _PMF
+from plone.app.dexterity import _ as _PMF
 from plone.app.dexterity.behaviors.metadata import DCFieldProperty
 from plone.app.dexterity.behaviors.metadata import MetadataBase
 from plone.autoform import directives

@@ -54,7 +54,7 @@ This package is implemented using ftw.themeing - So SCSS only, no default CSS fo
 Compatibility
 -------------
 
-Plone 4.3.x
+Plone 5.1.x
 
 
 Installation

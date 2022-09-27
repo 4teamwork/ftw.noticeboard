@@ -23,6 +23,11 @@
     <div metal:fill-slot="main">
         <div class="noticeboard-actions">
             Aktionen: <a class="edit-notice" tal:condition="view/can_edit" tal:attributes="href python:context.absolute_url() + '/edit'" i18n:translate="edit">Edit</a> | 
+            <a class="edit-notice pat-plone-modal"
+               tal:condition="python:view.can_edit() and view.show_plone5_upload()"
+               tal:attributes="href python:context.absolute_url() + '/upload'"
+               data-pat-plone-modal='{"actionOptions": {"reloadWindowOnClose":true}}'
+               i18n:translate="add_images">Add images</a> | 
             <a class="edit-notice" tal:condition="view/can_edit" tal:attributes="href python:context.absolute_url() + '/folder_contents'" i18n:translate="edit_images">Edit images</a> | 
             <a class="edit-notice" tal:condition="view/can_edit" tal:attributes="href python:context.absolute_url() + '/delete_confirmation'" i18n:translate="delete_images">Delete notice</a>
         </div>

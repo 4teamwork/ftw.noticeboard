@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<metadata>
+    <dependencies>
+        <dependency>profile-ftw.noticeboard:default</dependency>
+        <dependency>profile-collective.quickupload:default</dependency>
+    </dependencies>
+</metadata>
