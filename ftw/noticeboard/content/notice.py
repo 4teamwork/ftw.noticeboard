@@ -31,7 +31,7 @@ class INoticeSchema(model.Schema):
 
     price = schema.TextLine(
         title=_(u'label_price', default=u'Price'),
-        required=True,
+        required=False,
     )
 
     email = schema.TextLine(

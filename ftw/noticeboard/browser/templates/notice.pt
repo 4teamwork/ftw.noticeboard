@@ -52,7 +52,7 @@
                     <tal:title replace="context/title"/>
                 </h1>
 
-                <div class="price">
+                <div class="price" tal:condition="context/price | nothing">
                     <span class="label" i18n:translate="label_price">Price</span>
                     <span class="value" tal:content="context/price" />
                 </div>
