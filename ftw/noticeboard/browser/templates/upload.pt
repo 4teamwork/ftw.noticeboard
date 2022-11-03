@@ -6,19 +6,20 @@
 
     <div metal:fill-slot="main">
         <div>
-            <div class="pat-upload"
-                 id="noticeboard-image-upload"
+            <div id="noticeboard-image-upload"
                  tal:attributes="data-url string:${context/absolute_url}/@@fileUpload">
             </div>
         </div>
         <script>
-            var element = document.getElementById("noticeboard-image-upload");
-            var upload = jQuery(element).patUpload({url: element.getAttribute("data-url")})
-            upload.on("uploadAllCompleted", function(info){
-                var dropzone = info.target.querySelector('.upload-area').dropzone;
-                if (dropzone.getQueuedFiles().length === 0) {
-                    window.parent.location.reload();
-                }
+            require(['jquery'], function($) {
+                var element = document.getElementById("noticeboard-image-upload");
+                var upload = $(element).patUpload({url: element.getAttribute("data-url")})
+                upload.on("uploadAllCompleted", function(info){
+                    var dropzone = info.target.querySelector('.upload-area').dropzone;
+                    if (dropzone.getQueuedFiles().length === 0) {
+                        window.parent.location.reload();
+                    }
+                });
             });
         </script>
     </div>
